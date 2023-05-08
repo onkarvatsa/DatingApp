@@ -6,7 +6,7 @@ namespace API.Extensions
 {
     public static class IdentityServiceExtensions
     {
-        public static ServiceCollection AddIdentityServices(this IServiceCollection services, 
+        public static IServiceCollection AddIdentityServices(this IServiceCollection services, 
             IConfiguration config)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -22,7 +22,7 @@ namespace API.Extensions
                 };
             });
 
-            return (ServiceCollection)services;
+            return services;
         }
     }
 }

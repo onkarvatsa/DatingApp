@@ -1,0 +1,15 @@
+<h4>Internal Server Error: refresing the page will make the error dissappear</h4>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error: {{error.message}}</h5>
+    <p class="fint-weight-bold">Note: .....</p>
+    <p>What to do next?</p>
+    <ol>
+        <li>Open Chrome dev tool! Then check the falling request in the falling tab</li>
+        <li>...</li>
+        <li>...</li>
+    </ol>
+    <p>Following is the stack trace-</p>
+    <code class="mt-5" style="background-color: whitesmoke;">
+        {{error.details}}
+    </code>
+</ng-container>
